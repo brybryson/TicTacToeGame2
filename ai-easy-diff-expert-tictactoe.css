@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'NerkoOne-Regular';
+    src: url('./NerkoOne-Regular.ttf') format('truetype'); 
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'LuckiestGuy-Regular';
+    src: url('./LuckiestGuy-Regular.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Inter-Variable-Font';
+    src: url('./Inter-Variable-Font.ttf') format('truetype');
+    font-weight: 400;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+body {
+    background-image: url('background-text.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: fixed; */
+    background-color: rgb(251, 255, 223);
+    margin: 0;
+    padding: 0;
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.logo-container .logo {
+ 
+    width: 400px; 
+    max-width: 648px; 
+
+    
+}
+
+/* PLAYERS */
+.logo-container .player-x,
+.logo-container .player-o,
+.logo-container .player,
+.logo-container .AI {
+
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Color for Player X */
+.logo-container .player-x {
+  
+    color: #CC5124;
+    text-align: center;
+    font-size: 70px;   
+}
+
+/* Player X - player */
+.logo-container .player {
+    color: #CC5124;
+    text-align: center;
+    font-size: 70px;
+}
+
+/* Color for Player O */
+.logo-container .player-o {
+    color: #FFC121;
+    text-align: center;
+    border-color: #d76a42;
+    border-width: 90px;
+    font-size: 70px;
+}
+
+/* Player O - AI */
+.logo-container .AI {
+    color: #FFC121;
+    text-align: center;
+    font-size: 70px;
+}
+
+#scores-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: auto;
+}
+
+.score-container {
+    width: auto;
+    height: 90px;
+    background-color: rgb(230, 152, 50);
+    border-radius: 15px;
+    border-color: rgb(214, 186, 149);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.score-label {
+    font-family: 'Inter-Variable-Font-Regular', Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.score-value {
+    font-family: 'Inter-Variable-Font-Regular', Helvetica, sans-serif;
+    font-size: 24px;
+    /* font-weight: bold; */
+}
+
+.home-button {
+    border-radius: 15px;
+    padding: 5px;
+    width: 150px;
+    height: 50px;
+    background-color: #CC5124;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-button a {
+    text-decoration: none;
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif;
+    color: white;
+    font-size: 30px;
+}
+
+
+/* RESPONSIBLE FOR THE OUTER GRID OF TICTACTOE */
+#tic-tac-toe {
+    display: grid;
+    background-color: #FFDC83;
+    padding: 35px 40px;
+    border-radius: 15px;
+    grid-template-columns: repeat(6, 80px);
+    grid-template-rows: repeat(5, 70px);
+    grid-gap: 25px;
+    font-size: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'LuckiestGuy-Regular', Helvetica, sans-serif;
+}
+
+/* RESPONSIBLE FOR THE TICTACTOE SQUARES */
+#tic-tac-toe div {
+    margin-right: 100px;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4); 
+}
+
+
+/* Color for X */
+#tic-tac-toe div.x {
+    color: #CC5124;
+}
+
+/* Color for O */
+#tic-tac-toe div.o {
+    color: #FFC121;
+}
+
+
+ /* Add styles for the notification container */
+ .notification-container {
+    position: fixed;
+    width: 450px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif;
+    color: #FFC121;
+    font-size: 100px;
+    line-height: 80px;
+    display: none;
+    text-align: center;
+    z-index: 1001;
+}
+
+/* Style for the anchor tag around the button */
+.notification-container a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from the parent */
+}
+
+/* Style for the play again button */
+#play-again-btn {
+    position: relative;
+    width: 330px;
+    height: 70px;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+    margin-top: 10px;
+    padding: 10px;
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif;
+    font-size: 40px;
+    border-radius: 15px;
+    background-color: #CC5124;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+#play-again-btn:hover, .home-button:hover {
+    border-color: #3366cc;
+    background-color: #3366cc; 
+}
+
+/* Styles for the overlay background */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}

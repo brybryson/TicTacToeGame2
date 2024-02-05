@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="guide.css" />
+    <link rel="icon" href="logo.png">
+    <title>Tic-Tac-Toe Game</title>
+</head>
+
+
+
+<body>
+    <!-- LOGO -->
+
+    <!-- BACKGROUND -->
+    <div class="bg">
+        <img class="background-game" src="pictures/background-text.svg">
+    </div>
+
+
+    <div class="containerr">
+
+        <div class="title">Guide</div>
+
+        
+
+        <div class="image-sections">
+            <div class="image-container"><img src="pictures/begin.png" alt=""></div>
+            <div class="text-sectionss"> Certainly! Tic Tac Toe is a classic and straightforward game that is played on a 3x3 grid. The goal is to be the first player to get three of their symbols (X or O) in a row, either horizontally, vertically, or diagonally. Here's a step-by-step guide on how to play </div>
+
+
+
+        </div>
+
+        <div class="button-container">
+            <a href="mechanics.html"><button onclick="playSound()">BACK</button></a>
+                <button onclick="changePage('page2.html')">NEXT</button>
+        </div>
+
+    </div>
+
+    <script>
+
+            function playSound() {
+             // Create an audio element
+             var audio = new Audio('sounds/button-click.mp3'); // replace 'path/to/your/sound.mp3' with the actual path to your sound file
+             audio.play();
+                }
+
+                // Event listener for page load
+            window.addEventListener('load', playSound);
+
+
+            function changePage(page) {
+                const audio = new Audio();
+            audio.src = "./button-click.mp3"
+            audio.play(); 
+
+            window.location.href = page;
+
+        }
+    </script>
+</body>
+
+</html>

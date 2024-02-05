@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'NerkoOne-Regular';
+    src: url('./NerkoOne-Regular.ttf') format('truetype'); 
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'LuckiestGuy-Regular';
+    src: url('./LuckiestGuy-Regular.ttf') format('truetype');
+    font-weight: 100;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 100px; */
+}
+
+body {
+    background-image: url('background-text.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(251, 255, 223);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container .logo {
+    width: 550px;
+    max-width: 800px;
+    margin-bottom: 5px; /* Adjust margin to create space between logo and buttons */
+}
+
+.logo-container .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container .button #player-vs-ai:hover,
+.logo-container .button #easy-ai:hover,
+.logo-container .button #difficult-ai:hover,
+.logo-container .button #expert-ai:hover {
+    border-color: #3366cc;
+    background-color: #3366cc;
+}
+
+.logo-container .button #player-vs-ai,
+.logo-container .button #easy-ai,
+.logo-container .button #difficult-ai,
+.logo-container .button #expert-ai {
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: 50px;
+    color: white;
+    width: 400px;
+    height: 70px;
+}
+
+.logo-container .button #player-vs-ai {
+    border-radius: 15px;
+    margin-top: 10px;
+    border: 2px solid #CC5124;
+    border-radius: 80px;
+    background: #CC5124;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container .button #easy-ai {
+    border-radius: 15px;
+    margin-top: 10px;
+    border: 2px solid #FFC121;
+    border-radius: 80px;
+    background: #FFC121;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container .button #difficult-ai {
+    border-radius: 15px;
+    margin-top: 10px;
+    border: 2px solid #FFC121;
+    border-radius: 80px;
+    background: #FFC121;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container .button #expert-ai {
+    border-radius: 15px;
+    margin-top: 10px;
+    border: 2px solid #FFC121;
+    border-radius: 80px;
+    background: #FFC121;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for the notif */
+.notif {
+    display: none;
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: #FFDC83;
+    border: 3px solid #debc67;  
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif; 
+    font-size: 60px;
+    color: #CC5124;
+    z-index: 1000;
+    text-align: center; /* Center the text */
+}
+
+.notif p {
+    font-size: 70px; /* Adjust font size */
+    line-height: 1;
+    padding: 0 50px 0 50px;
+}
+
+.notif button {
+    margin-top: 10px; /* Adjust the distance between the buttons and the text */
+    padding: 0px; /* Adjust button padding */
+    height: 70px;
+    width: 200px; /* Adjust the width of the buttons */
+    gap: 10px;
+    background-color: #CC5124;
+    border-radius: 10px;
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif; 
+    color: white;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.notif button:hover {
+    border-color: #3366cc;
+    background-color: #3366cc;  
+}
+
+
+/* Styles for the overlay background */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+

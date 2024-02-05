@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ai-easy-diff-expert-tictactoe.css" />
+    <link rel="icon" href="logo.png">
+    <title>Tic-Tac-Toe Game</title>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- Tic-Tac-Toe container -->
+        <div id="tic-tac-toe"></div>
+
+        <!-- Notification Container -->
+        <div id="notification-container" class="notification-container">
+            <div id="notification-content"></div>
+            <a href="index.html"><button id="play-again-btn" onclick="playAgain()">Play Again</button></a>
+        </div>
+
+
+        <!-- LOGO -->
+        <div class="logo-container">
+            <img class="logo" src="new-logo.svg">
+
+       
+
+
+        <!-- SCORE CONTAINER -->
+
+        <div id="scores-container"></div>
+            <div id="player-x-score" class="score-container">
+                <span class="score-label">Player O:</span>
+            <span class="score-value">0</span>
+        </div>
+        <div id="player-o-score" class="score-container">
+            <span class="score-label">Player X:</span>
+            <span class="score-value">0</span>
+
+            <div class="home-button">
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- Overlay for darkened background -->
+        <div class="overlay" id="overlay"></div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="canvas" style="position: fixed; top: 0; left: 0; z-index: 999; pointer-events: none;"></canvas>
+
+    <script src="player-vs-player-2.js"></script>
+</body>
+
+</html>

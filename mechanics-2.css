@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'NerkoOne-Regular';
+    src: url('./NerkoOne-Regular.ttf') format('truetype'); 
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'LuckiestGuy-Regular';
+    src: url('./LuckiestGuy-Regular.ttf') format('truetype');
+    font-weight: 100;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* gap: 100px; */
+}
+
+body {
+    background-image: url('background-text.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(251, 255, 223);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container .button {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container .button #game-option:hover,
+.logo-container .button #player-vs-player:hover {
+    border-color: #3366cc;
+    background-color: #3366cc;
+}
+
+.logo-container .button #game-option,
+.logo-container .button #player-vs-player,
+.logo-container .button #player-vs-ai {
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: 50px;
+    color: white;
+    width: 200px;
+    height: 70px;
+}
+
+.logo-container .button #game-option {
+    border-radius: 15px;
+    margin-top: 10px;
+    border: 2px solid #FFC121;
+    border-radius: 80px;
+    background: #FFC121;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container .button #player-vs-player {
+    border-radius: 15px;
+    margin-top: 10px;
+    border: 2px solid #FFC121;
+    border-radius: 80px;
+    background: #FFC121;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.card {
+    height: 300px; /* Adjusted height for better spacing */
+    width: 60%; /* Adjusted width for better spacing */
+    padding: 40px;
+    background-color: #DA5E32;
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif;
+    border-radius: 15px;
+    color: #CC5124;
+    display: flex;
+    margin-top: 20px; /* Adjusted margin-top for better spacing */
+    align-items: center;
+}
+
+.card p {
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0; /* Remove default margin */
+    
+}
+
+.card p span {
+    font-weight: bolder;
+    margin-top: 30px;
+    font-size: 70px;
+    text-align: justify;
+}
+
+/* .button {
+    margin-top: 20px;
+} */

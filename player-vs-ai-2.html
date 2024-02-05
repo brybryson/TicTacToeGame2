@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="player-vs-ai-2.css" />
+    <link rel="icon" href="logo.png">
+    <title>Tic-Tac-Toe Game</title>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- LOGO -->
+        <div class="logo-container">
+            <img class="logo" src="new-logo.svg">
+
+            <div class="button">
+            <a href="game-option-2.html"><button id="player-vs-ai">Player vs AI</button></a>
+            <a href="ai-easy-game-2.html"><button id="easy-ai">Easy</button></a>
+            <a href="ai-difficult-game-3.html"><button id="difficult-ai">Difficult</button></a>
+            <a href="ai-expert-game-2.html"><button id="expert-ai">Expert</button></a>
+            </div>
+        </div>
+    </div>
+
+    
+   <!-- Notification Container -->
+<div class="overlay" id="overlay"></div>
+
+<div class="notif" id="notification">
+    <p id="notification-content">AI difficulty: Easy (for example)</p>
+    <button id="cancel-btn" onclick="hideNotification()">Cancel</button>
+    <a href="#" id="play-link"><button id="play-button">Play</button></a>
+</div>
+
+
+
+
+    <script src="player-vs-ai-2.js"></script>
+
+</body>
+
+</html>

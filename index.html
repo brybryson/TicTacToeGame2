@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="landing_2.css" />
+    <link rel="icon" href="logo.png">
+    <title>Tic-Tac-Toe Game</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- LOGO -->
+        <div class="logo-container">
+            <img class="logo" src="new-logo.svg">
+            <div class="button">
+                <a href="mechanics-2.html"><button id="play" onclick="playButtonClickAndSound()">PLAY</button></a>
+            </div>
+        </div>
+        <!-- Overlay for darkened background -->
+        <div class="overlay" id="overlay"></div>
+    </div>
+
+    <!-- AUDIO - BUTTON CLICKING SOUNDS -->
+    <audio id="clickSound">
+        <source src="alert-sound.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="footer">
+        <p>© Copyright 2024 | All rights reserved.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Created by <span>Angcot · Fesariton · Melliza · Quintos · Sosas</span>
+        </p>
+        <div class="right-side-footer">
+            <p class="hi">Connect with us: </p>
+            <a href="https://www.facebook.com/inytwjo"><img class="icon" src="envelope.svg" alt="Envelope"></a>
+            <a href="https://www.facebook.com/inytwjo"><img class="icon" src="facebook.svg" alt="Facebook"></a>
+        </div>
+    </div>
+
+    <script src="landing-2.js"></script>
+</body>
+
+</html>

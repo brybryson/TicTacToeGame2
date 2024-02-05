@@ -1,0 +1,385 @@
+@font-face {
+    font-family: 'NerkoOne-Regular';
+    src: url('./NerkoOne-Regular.ttf') format('truetype'); 
+    font-weight: 100;
+}
+
+body {
+    position: fixed;
+    background-color: rgb(251, 255, 223);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.background-game {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+.logo-container {
+    position: absolute;
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    z-index: 2;
+}
+
+.logo-container .logo {
+    width: 70%; 
+    max-width: 648px; 
+    height: auto; 
+}
+
+
+/* BUTTONS PART */
+
+/* GAME MODE BUTTON */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    width: 636px;
+    height: 402px; 
+    overflow: hidden;
+    z-index: 5;
+    position: absolute;
+    top: 60%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.button-container .game-option-button {
+    width: 450px;
+    height: 70px;
+    margin-top: 5px; 
+    border: 2px solid #CC5124;
+    border-radius: 80px;
+    background:  #CC5124;
+    cursor: pointer;
+    text-align: center;
+    z-index: 5;
+}
+
+.text-holder-1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif; 
+    font-weight: 100; 
+    color: white; 
+}
+
+.button-container button:hover {
+    border-color: transparent;
+    background-color: #fdba00; 
+}
+
+.button-container .game-option-button,
+.button-container .play-button {
+    width: 450px;
+    height: 70px;
+    margin-top: 20px; /* Adjust the distance between buttons */
+    border: 2px solid #CC5124;
+    border-radius: 80px;
+    background:  #CC5124;
+    cursor: pointer;
+    text-align: center;
+    z-index: 5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+/* PLAY BUTTON */
+.button-container .play-button {
+    width: 450px;
+    height: 90px;
+   margin-top: 25px;
+    border: 2px solid #FFC121;
+    border-radius: 80px;
+    background:  #FFC121;
+    cursor: pointer;
+    text-align: center;
+    z-index: 5;
+}
+
+.text-holder-2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px; 
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif; 
+    font-weight: 100; 
+    color: white; 
+}
+
+
+
+/* Styles for the game options */
+.game-option-container {
+    position: relative;
+}
+
+.game-options {
+    display: none;
+    position: relative;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    border-radius: 10px;
+    background: #CC5124;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 30;
+}
+
+.game-option {
+    width: 100%;
+    height: 70px;
+    border-radius: 10px;
+    top: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif;
+    font-weight: 100;
+    color: white;
+    cursor: pointer;
+}
+
+.game-option:hover {
+    border-radius: 10px;
+    background-color: #FFC121;
+}
+
+
+
+/* Styles for the notif */
+.notif {
+    display: none;
+    width: 450px;
+    height: 280px;
+    position: fixed; /* Change from absolute to fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    background-color: #FFDC83;
+    border: 3px solid #debc67;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif;
+    font-size: 60px;
+    line-height: 40px;
+    color: #CC5124;
+    z-index: 1000;
+    text-align: center; /* Center the text */
+}
+
+.notif button {
+    margin-top: 20px; /* Adjust the space between text and button */
+    padding: 5px; /* Adjust button padding */
+    height: 45px;
+    width: 350px;
+    background-color: #CC5124;
+    border-radius: 10px;
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif;
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.notif button:hover {
+    border-color: #3366cc;
+    background-color: #3366cc;
+}
+
+/* Styles for the overlay background */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.Members{
+    font-family: 'NerkoOne-Regular';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%; /* Make the .names container take up 100% of its parent's width */
+
+}
+
+.names{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CC5124;
+    color: white;
+    margin-right: 20px;
+    width: 70%; /* Make the .names container take up 100% of its parent's width */
+    padding: 5px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all;
+   
+}
+
+.names:hover{
+    background-color: #3366cc;
+}
+
+.modal {
+    padding: 1px 30px;
+    color: rgb(255, 0, 0);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all;
+    
+}
+
+.modal:hover {
+    color: rgb(4, 0, 255);
+    text-shadow: #3366cc;
+}
+
+.list{
+    margin-right: 10px;
+    
+}
+
+.containerr {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 9;
+    padding: 0;
+    margin: 60px;
+}
+
+.image-sections {
+    display: flex;
+    flex-direction: row;
+}
+
+.image-sections div {
+    margin: 10px; /* Adjust as needed for spacing */
+    font-family: 'NerkoOne-Regular';
+    color:black;
+    padding: 40px;
+    color: white;   
+    height: 140px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+/* Add styles for your images and text as needed */
+.image-sections img {
+    max-width: 100px; /* Adjust as needed */
+    height: auto;
+
+    
+
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 180px;
+}
+
+
+.button-container button{
+    width: 150px;
+    height: 50px;
+    margin-top: 5px; 
+    border: 2px solid #CC5124;
+    border-radius: 80px;
+    background:  #CC5124;
+    cursor: pointer;
+    text-align: center;
+    z-index: 5;
+    color: white;
+    font-family: 'NerkoOne-Regular';
+    font-size: 24px;
+}
+
+.text-sectionss{
+    background-color: #3366cc;
+    width: 500px;
+    border-radius: 30px;
+    font-size: 20px;
+    height: 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Updated box shadow */
+
+
+    
+    
+}
+
+.image-container img {
+    max-width: 60%;
+    height: auto;
+    margin-top: -50px;
+    box-shadow: black;
+    border-color: black;
+    border: black;
+    
+}
+
+
+
+.title {
+    font-size: 1.5em; /* Adjust as needed */
+    margin-bottom: 50px; /* Adjust as needed */
+    margin-top: 40px;
+    color: white;
+    font-family: 'NerkoOne-Regular';
+    background-color: #CC5124;
+    padding: 10px 50px;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.title:hover{
+    background-color: #FFDC83;
+}
+
+.image-sections .text-sectionss:hover{
+    background-color: #87acf7;
+}
+

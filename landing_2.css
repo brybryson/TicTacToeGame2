@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'NerkoOne-Regular';
+    src: url('./NerkoOne-Regular.ttf') format('truetype'); 
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'LuckiestGuy-Regular';
+    src: url('./LuckiestGuy-Regular.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Helvetica-Light-Regular';
+    src: url('./Helvetica Light Regular.ttf') format('truetype');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Inter-Variable-Font';
+    src: url('./Inter-Variable-Font.ttf') format('truetype');
+    font-weight: 400;
+}
+
+html {
+    height: 100%;
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    /* gap: 100px; */
+}
+
+body {
+    background-image: url('background-text.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(251, 255, 223);
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container .logo {
+    width: 550px;
+    margin-bottom: 5px; /* Adjust margin to create space between logo and buttons */
+}
+
+.logo-container .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container .button #game-option:hover,
+.logo-container .button #play:hover {
+    border-color: #3366cc;
+    background-color: #3366cc;
+}
+
+.logo-container .button #game-option,
+.logo-container .button #play {
+    font-family: 'NerkoOne-Regular', Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: 70px;
+    color: white;
+    width: 450px;
+    height: 90px;
+}
+
+.logo-container .button #play {
+    border-radius: 15px;
+    margin-top: 10px;
+    border: 2px solid #FFC121;
+    border-radius: 80px;
+    background: #FFC121;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.footer {
+    height: 40px;
+    width: 100%;
+    padding: 20px;
+    background-color: #DA5E32;
+    font-family: 'Inter-Variable-Font'; 
+    text-align: center;
+    color: #CC5124;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer p {
+    font-size: 13px;
+    line-height: 16px;
+    text-align: left;
+    color: #ffffff;
+    margin: 0; /* Remove default margin */
+    margin-left: 200px; /* Adjust the left margin as needed */
+}
+
+.footer p span {
+    font-weight: bolder;
+    color: #FFBEA7; /* Set color for the specified text within the span */
+}
+
+
+.right-side-footer {
+    display: flex;
+    margin-right: 200px;
+    
+}
+
+.right-side-footer .hi  {
+    
+    font-size: 13px;
+    text-align: right;
+    color: #ffffff;
+    margin-left: 200px; /* Adjust right margin as needed */
+}
+
+
+
+.right-side-footer .icon {
+    width: 18px; 
+    height: 18px; 
+    margin-left: 10px;
+   
+}
+
+
